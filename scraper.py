@@ -19,6 +19,10 @@ tds = root.cssselect('td')
 print tds
 
 for td in tds:
-  print "HTML tag and text:", lxml.html.tostring(td)
-  print "HTML text:", td.text
+  record = {"cell" : td.text}
+  print record
+  scraperwiki.sqlite.save(["cell"], record)
+  
+#  print "HTML tag and text:", lxml.html.tostring(td)
+#  print "HTML text:", td.text
 
