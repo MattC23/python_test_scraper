@@ -3,7 +3,7 @@ import scraperwiki
 
 html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sittard/")
 # Scraperwiki.scrape function will grab all of the html on one page
-print html
+# print html
 # This will display the html that's been grabbed
 
 import lxml.html
