@@ -19,6 +19,6 @@ tds = root.cssselect('td')
 print tds
 
 for td in tds:
-  print lxml.html.tostring(td)
-  print td.text
+  print "HTML tag and text:", lxml.html.tostring(td)
+  print "HTML text:", td.text
 
