@@ -16,7 +16,7 @@ root = lxml.html.fromstring(html)
 tds = root.cssselect('td')
 # cssselect function will grab particular elements from a page, e.g. td tags, tr tags, li tags
 
-print tds
+# print tds
 
 indexno = 0
 # This creates a variable we can use as a unique key
