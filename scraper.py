@@ -18,10 +18,16 @@ tds = root.cssselect('td')
 
 print tds
 
+indexno = 0
+# This creates a variable we can use as a unique key
+
 for td in tds:
-  record = {"cell" : td.text}
-  print record
-  scraperwiki.sqlite.save(["cell"], record)
+  indexno = indexno + 1
+  # This ensures the variable indexno is a unique key 
+  record = {"cell" : td.text, "index" : indexno}
+  # This creates a dictionary variable called 'record' with two sets of data in it
+  scraperwiki.sqlite.save(["index"], record)
+  # This states that index is the unique key, and also says that the variable 'record' should be added to the database
   
 #  print "HTML tag and text:", lxml.html.tostring(td)
 #  print "HTML text:", td.text
